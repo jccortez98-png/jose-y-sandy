@@ -123,7 +123,12 @@
     },
     "gallery": [
       {
-        "url": "assets/images/couple-hero.jpg",
+        "url": "assets/images/1.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      },
+      {
+        "url": "assets/images/2.jpg",
         "alt": "Foto Boda",
         "caption": "Nuevo momento inolvidable"
       },
@@ -138,17 +143,12 @@
         "caption": "Nuevo momento inolvidable"
       },
       {
-        "url": "assets/images/couple-closing.jpg",
+        "url": "assets/images/6.jpg",
         "alt": "Foto Boda",
         "caption": "Nuevo momento inolvidable"
       },
       {
         "url": "assets/images/7.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
-      },
-      {
-        "url": "assets/images/1.jpg",
         "alt": "Foto Boda",
         "caption": "Nuevo momento inolvidable"
       }
