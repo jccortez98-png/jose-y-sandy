@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#1b2a4a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ribbon on top -->
+  <path d="M24 14 C18 10 14 13 16 18 C18 22 26 22 32 22 C38 22 46 22 48 18 C50 13 46 10 40 14" />
+  <circle cx="32" cy="20" r="2.5" />
+  
+  <!-- Left Bell -->
+  <path d="M24 24 C24 24 18 34 16 40 C14 44 18 46 28 46 C35 46 37 43 35 38 C32 32 30 24 30 24" />
+  <path d="M16 46 C15 49 19 52 27 52 C34 52 36 49 35 46" />
+  <circle cx="26" cy="54" r="2" />
+  
+  <!-- Right Bell -->
+  <path d="M37 24 C37 24 41 32 44 38 C47 43 43 46 36 46 C32 46 31 44 32 40" />
+  <path d="M36 46 C37 49 42 52 48 50 C52 48 51 46 50 46" />
+  <circle cx="45" cy="52" r="2" />
+  
+  <!-- Sparkles -->
+  <line x1="12" y1="18" x2="12" y2="14" />
+  <line x1="52" y1="18" x2="52" y2="14" />
+</svg>

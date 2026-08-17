@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Wax Seal Outer Drop Shadow -->
+    <filter id="sealShadow" x="-25%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#060c18" flood-opacity="0.65" />
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#060c18" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Foliage Soft Shadow -->
+    <filter id="leafShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#060c18" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Emboss Filter for Monogram -->
+    <filter id="embossFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="1.5" stdDeviation="0.8" flood-color="#ffffff" flood-opacity="0.9" />
+      <feDropShadow dx="-1" dy="-1.5" stdDeviation="1.2" flood-color="#8a7e6b" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Radial Gradients for Realistic Ivory Wax -->
+    <radialGradient id="outerWaxGrad" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#faf8f2" />
+      <stop offset="70%" stop-color="#ede7da" />
+      <stop offset="92%" stop-color="#ddd4c3" />
+      <stop offset="100%" stop-color="#c8bea9" />
+    </radialGradient>
+
+    <radialGradient id="innerWaxGrad" cx="45%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#faf8f4" />
+      <stop offset="45%" stop-color="#f0ebe0" />
+      <stop offset="85%" stop-color="#e2dbcd" />
+      <stop offset="100%" stop-color="#d3c9b7" />
+    </radialGradient>
+
+    <!-- Watercolor Leaf Gradients -->
+    <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#82a88f" />
+      <stop offset="60%" stop-color="#557c63" />
+      <stop offset="100%" stop-color="#365440" />
+    </linearGradient>
+
+    <linearGradient id="leafGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6b8f78" />
+      <stop offset="70%" stop-color="#496d56" />
+      <stop offset="100%" stop-color="#2d4937" />
+    </linearGradient>
+
+    <linearGradient id="leafGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a4c2ae" />
+      <stop offset="70%" stop-color="#739980" />
+      <stop offset="100%" stop-color="#4d735a" />
+    </linearGradient>
+  </defs>
+
+  <!-- =========================================================================
+       LAYER 1: BOTANICAL FOLIAGE BEHIND THE SEAL
+       ========================================================================= -->
+  <g id="botanicals" filter="url(#leafShadow)">
+    
+    <!-- LEFT SIDE: EUCALYPTUS / OLIVE LEAF BRANCH -->
+    <!-- Main stem -->
+    <path d="M160 170 Q110 190 70 230 Q50 255 35 285" stroke="#4a5f45" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.8" />
+    <path d="M115 195 Q85 165 60 140" stroke="#4a5f45" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.7" />
+    <path d="M85 220 Q55 210 30 205" stroke="#4a5f45" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.7" />
+
+    <!-- Top Left Leaves -->
+    <path d="M60 140 C50 120 70 100 85 110 C95 125 80 145 60 140 Z" fill="url(#leafGradLight)" opacity="0.9" />
+    <path d="M85 155 C70 140 85 125 105 130 C115 145 100 165 85 155 Z" fill="url(#leafGrad1)" opacity="0.95" />
+    <path d="M50 160 C35 150 40 130 58 135 C70 148 62 168 50 160 Z" fill="url(#leafGrad2)" opacity="0.88" />
+
+    <!-- Mid Left Leaves -->
+    <path d="M70 190 C45 180 50 155 72 165 C88 178 82 200 70 190 Z" fill="url(#leafGrad1)" opacity="0.95" />
+    <path d="M30 205 C15 195 22 175 42 180 C56 192 48 214 30 205 Z" fill="url(#leafGrad2)" opacity="0.9" />
+    <path d="M55 225 C35 215 42 195 62 200 C76 212 68 234 55 225 Z" fill="url(#leafGradLight)" opacity="0.92" />
+
+    <!-- Lower Left Leaves -->
+    <path d="M80 240 C58 235 62 210 85 218 C98 230 92 250 80 240 Z" fill="url(#leafGrad1)" opacity="0.95" />
+    <path d="M48 260 C30 250 38 230 58 235 C72 248 64 270 48 260 Z" fill="url(#leafGrad2)" opacity="0.9" />
+    <path d="M35 285 C20 275 28 258 46 262 C58 274 50 294 35 285 Z" fill="url(#leafGradLight)" opacity="0.88" />
+
+    <!-- Leaf Veins -->
+    <path d="M70 120 Q75 130 65 138" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.4" fill="none" />
+    <path d="M92 140 Q95 150 88 155" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.4" fill="none" />
+    <path d="M60 172 Q68 180 72 188" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.4" fill="none" />
+    <path d="M40 215 Q48 222 55 224" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.4" fill="none" />
+
+    <!-- TOP RIGHT: DRIED BABY'S BREATH (GYPSOPHILA) FLORAL TWIGS -->
+    <!-- Twigs -->
+    <g stroke="#9a815a" stroke-width="1.3" stroke-linecap="round" fill="none" opacity="0.85">
+      <path d="M165 145 Q210 115 250 65" />
+      <path d="M200 120 Q225 95 240 80" />
+      <path d="M220 100 Q250 85 270 70" />
+      <path d="M190 130 Q220 125 255 120" />
+      <path d="M225 122 Q250 110 268 100" />
+      <path d="M205 138 Q240 145 275 135" />
+      <path d="M235 142 Q260 155 280 150" />
+      <path d="M185 150 Q220 175 250 190" />
+      <path d="M215 170 Q245 185 265 180" />
+    </g>
+
+    <!-- Baby's Breath Flower Florets (Clusters of soft white/cream blossoms) -->
+    <g fill="#faf7f0" stroke="#dfd6c4" stroke-width="0.7">
+      <!-- Topmost cluster -->
+      <circle cx="250" cy="65" r="4.5" />
+      <circle cx="245" cy="58" r="3.5" fill="#ffffff" />
+      <circle cx="256" cy="60" r="3.5" />
+      <circle cx="240" cy="78" r="4" />
+      <circle cx="246" cy="74" r="3" fill="#ffffff" />
+
+      <!-- Upper right cluster -->
+      <circle cx="270" cy="70" r="4.5" />
+      <circle cx="276" cy="65" r="3.5" fill="#ffffff" />
+      <circle cx="266" cy="85" r="4" />
+      <circle cx="274" cy="82" r="3" />
+
+      <!-- Mid right cluster -->
+      <circle cx="255" cy="120" r="5" />
+      <circle cx="262" cy="114" r="4" fill="#ffffff" />
+      <circle cx="248" cy="115" r="3.5" />
+      <circle cx="268" cy="100" r="4.5" />
+      <circle cx="275" cy="98" r="3.5" fill="#ffffff" />
+
+      <!-- Lower right cluster -->
+      <circle cx="275" cy="135" r="4.5" />
+      <circle cx="282" cy="130" r="3.5" fill="#ffffff" />
+      <circle cx="280" cy="150" r="4" />
+      <circle cx="286" cy="146" r="3" fill="#ffffff" />
+
+      <!-- Bottom right cluster -->
+      <circle cx="250" cy="190" r="4.5" />
+      <circle cx="256" cy="184" r="3.5" fill="#ffffff" />
+      <circle cx="265" cy="180" r="4" />
+      <circle cx="238" cy="172" r="3.5" />
+    </g>
+
+    <!-- Tiny yellow/gold flower centers -->
+    <g fill="#c4aa7d">
+      <circle cx="250" cy="65" r="1.2" />
+      <circle cx="240" cy="78" r="1.1" />
+      <circle cx="270" cy="70" r="1.2" />
+      <circle cx="255" cy="120" r="1.3" />
+      <circle cx="268" cy="100" r="1.2" />
+      <circle cx="275" cy="135" r="1.2" />
+      <circle cx="280" cy="150" r="1.1" />
+      <circle cx="250" cy="190" r="1.2" />
+    </g>
+  </g>
+
+  <!-- =========================================================================
+       LAYER 2: 3D IVORY WAX SEAL WITH ORGANIC RIM
+       ========================================================================= -->
+  <g id="waxSealBody" filter="url(#sealShadow)">
+    
+    <!-- Outer Organic Wax Rim (Hand-poured irregular circular silhouette) -->
+    <path d="M160 20 
+             C188 18, 218 26, 242 45 
+             C268 66, 288 95, 292 128 
+             C296 160, 285 194, 268 222 
+             C248 252, 218 276, 182 284 
+             C146 292, 108 285, 78 265 
+             C48 244, 28 214, 24 178 
+             C20 142, 34 105, 58 78 
+             C84 48, 122 22, 160 20 Z" 
+          fill="url(#outerWaxGrad)" 
+          stroke="#ded4c3" 
+          stroke-width="2" />
+
+    <!-- Wax Rim Edge Soft Highlight (Top Left Reflection) -->
+    <path d="M80 60 C110 32 165 24 215 38" 
+          stroke="#ffffff" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          opacity="0.6" 
+          filter="blur(3px)" 
+          fill="none" />
+
+    <!-- Inner Recessed Wax Circle -->
+    <circle cx="160" cy="155" r="94" 
+            fill="url(#innerWaxGrad)" 
+            stroke="#d8cebe" 
+            stroke-width="2.5" />
+
+    <!-- Inner Recessed Shadow (Top edge of depression) -->
+    <path d="M78 125 A94 94 0 0 1 242 125" 
+          stroke="#ab9f8c" 
+          stroke-width="3" 
+          opacity="0.45" 
+          filter="blur(2px)" 
+          fill="none" />
+
+    <!-- Inner Concentric Raised Guide Ring -->
+    <circle cx="160" cy="155" r="82" 
+            stroke="#ffffff" 
+            stroke-width="2" 
+            stroke-opacity="0.8" 
+            fill="none" />
+    <circle cx="160" cy="155" r="80" 
+            stroke="#b8ac9a" 
+            stroke-width="1.8" 
+            stroke-opacity="0.6" 
+            fill="none" />
+
+    <!-- =========================================================================
+         EMBOSSED CALLIGRAPHIC "JS" INTERTWINED MONOGRAM
+         ========================================================================= -->
+    <g id="monogramJS" filter="url(#embossFilter)">
+      
+      <!-- LETTER J (Left script with elegant top and bottom flourish) -->
+      <!-- Highlight Base Layer -->
+      <path d="M142 88 
+               C158 84, 184 86, 178 100 
+               C172 114, 146 116, 134 122
+               C145 130, 165 142, 162 168
+               C158 198, 142 224, 116 230
+               C96 235, 78 220, 84 198
+               C90 178, 115 178, 118 194
+               C120 206, 112 214, 102 214
+               C96 214, 94 208, 96 202"
+            stroke="#ffffff" 
+            stroke-width="7" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none" 
+            opacity="0.9" />
+
+      <!-- Shadow Core Layer -->
+      <path d="M142 88 
+               C158 84, 184 86, 178 100 
+               C172 114, 146 116, 134 122
+               C145 130, 165 142, 162 168
+               C158 198, 142 224, 116 230
+               C96 235, 78 220, 84 198
+               C90 178, 115 178, 118 194
+               C120 206, 112 214, 102 214
+               C96 214, 94 208, 96 202"
+            stroke="#998d7b" 
+            stroke-width="4.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none" 
+            opacity="0.8" />
+
+      <!-- LETTER S (Intertwined smoothly with J) -->
+      <!-- Highlight Base Layer -->
+      <path d="M214 108 
+               C234 116, 230 138, 208 148 
+               C184 158, 142 166, 136 186
+               C130 208, 150 226, 178 224
+               C206 222, 232 202, 235 178
+               C236 166, 226 160, 218 165
+               C210 170, 212 182, 222 186"
+            stroke="#ffffff" 
+            stroke-width="7" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none" 
+            opacity="0.9" />
+
+      <!-- Shadow Core Layer -->
+      <path d="M214 108 
+               C234 116, 230 138, 208 148 
+               C184 158, 142 166, 136 186
+               C130 208, 150 226, 178 224
+               C206 222, 232 202, 235 178
+               C236 166, 226 160, 218 165
+               C210 170, 212 182, 222 186"
+            stroke="#998d7b" 
+            stroke-width="4.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none" 
+            opacity="0.8" />
+
+      <!-- Delicate Flourish Droplets & Dots around Monogram -->
+      <circle cx="118" cy="116" r="2.5" fill="#998d7b" />
+      <circle cx="119" cy="117" r="2.2" fill="#ffffff" opacity="0.9" />
+      
+      <circle cx="218" cy="102" r="2.5" fill="#998d7b" />
+      <circle cx="219" cy="103" r="2.2" fill="#ffffff" opacity="0.9" />
+
+      <circle cx="152" cy="236" r="2.2" fill="#998d7b" />
+      <circle cx="153" cy="237" r="1.8" fill="#ffffff" opacity="0.9" />
+    </g>
+
+  </g>
+</svg>

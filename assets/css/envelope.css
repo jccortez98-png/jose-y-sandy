@@ -1,0 +1,233 @@
+/* ==========================================================================
+   ENVELOPE OPENING EXPERIENCE & WAX SEAL ANIMATION
+   ========================================================================== */
+
+.envelope-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(circle at center, #1e314f 0%, #121e33 60%, #0a111e 100%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.9s ease;
+  overflow: hidden;
+}
+
+.envelope-overlay.opened {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Background subtle luxury particles or botanical shadows */
+.envelope-bg-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px, 16px 16px;
+  background-position: 0 0, 16px 16px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Envelope Body */
+.envelope-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: 480px;
+  perspective: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(145deg, #1b2a4a, #131f36);
+  border-radius: 8px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Envelope Flaps (Triangle folds) */
+.envelope-top-flap,
+.envelope-bottom-flap,
+.envelope-left-flap,
+.envelope-right-flap {
+  pointer-events: none;
+}
+
+.envelope-top-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 50% 55%, 100% 0);
+  background: linear-gradient(180deg, #24385e 0%, #1a2a47 100%);
+  transform-origin: top center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 4;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.envelope-bottom-flap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 100%, 50% 45%, 100% 100%);
+  background: linear-gradient(0deg, #16243d 0%, #1c2b4a 100%);
+  z-index: 3;
+}
+
+.envelope-left-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+  background: linear-gradient(90deg, #142036 0%, #192742 100%);
+  z-index: 2;
+}
+
+.envelope-right-flap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+  background: linear-gradient(270deg, #142036 0%, #192742 100%);
+  z-index: 2;
+}
+
+/* Wax Seal Button with Official Monogram (Unclipped & Pure Transparent Background) */
+.wax-seal-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 270px;
+  height: 270px;
+  max-width: 88vw;
+  max-height: 88vw;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  pointer-events: auto;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+  -webkit-tap-highlight-color: transparent;
+  animation: sealPulse 3s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wax-seal-btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(1.03);
+}
+
+.wax-seal-btn:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+.wax-seal-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.5));
+  display: block;
+}
+
+/* Floating helper hint */
+.envelope-hint {
+  margin-top: 24px;
+  text-align: center;
+  color: #e4ddcf;
+  font-family: 'Cinzel', 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  animation: fadeInOut 2.4s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.envelope-hint .guest-welcome {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #c5d3e8;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.envelope-hint .guest-name-badge {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Animations */
+@keyframes sealPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.045);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.65; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+
+/* Envelope Opening Animation Triggered via JS */
+.envelope.opening .envelope-top-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.opening .wax-seal-btn {
+  transform: translate(-50%, -80%) scale(0.6);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}

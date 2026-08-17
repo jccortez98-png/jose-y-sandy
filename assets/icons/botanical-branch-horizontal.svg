@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" fill="none">
+  <!-- Central main stem -->
+  <path d="M10 14 Q60 12 110 14" stroke="#8d99ae" stroke-width="1.2" stroke-linecap="round" opacity="0.7" />
+  
+  <!-- Center tip leaf -->
+  <path d="M60 13 Q60 5 64 8 Q64 13 60 13 Z" fill="#b0b8c4" opacity="0.6" stroke="#758296" stroke-width="0.8" />
+  
+  <!-- Left side leaves -->
+  <path d="M45 13 Q42 6 36 8 Q38 14 45 13 Z" fill="#b0b8c4" opacity="0.6" stroke="#758296" stroke-width="0.8" />
+  <path d="M48 14 Q52 21 58 19 Q54 13 48 14 Z" fill="#b0b8c4" opacity="0.5" stroke="#758296" stroke-width="0.8" />
+  <path d="M30 13 Q25 8 20 11 Q24 16 30 13 Z" fill="#b0b8c4" opacity="0.6" stroke="#758296" stroke-width="0.8" />
+  <path d="M33 14 Q36 21 42 19 Q38 14 33 14 Z" fill="#b0b8c4" opacity="0.5" stroke="#758296" stroke-width="0.8" />
+  
+  <!-- Right side leaves -->
+  <path d="M75 13 Q78 6 84 8 Q82 14 75 13 Z" fill="#b0b8c4" opacity="0.6" stroke="#758296" stroke-width="0.8" />
+  <path d="M72 14 Q68 21 62 19 Q66 13 72 14 Z" fill="#b0b8c4" opacity="0.5" stroke="#758296" stroke-width="0.8" />
+  <path d="M90 13 Q95 8 100 11 Q96 16 90 13 Z" fill="#b0b8c4" opacity="0.6" stroke="#758296" stroke-width="0.8" />
+  <path d="M87 14 Q84 21 78 19 Q82 14 87 14 Z" fill="#b0b8c4" opacity="0.5" stroke="#758296" stroke-width="0.8" />
+</svg>

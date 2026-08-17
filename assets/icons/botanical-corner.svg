@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <!-- Main stem curving into corner -->
+  <path d="M-20 -20 Q40 60 90 140 Q110 175 140 220" stroke="#758296" stroke-width="1.6" stroke-linecap="round" opacity="0.65" />
+  
+  <!-- Secondary stems -->
+  <path d="M45 65 Q90 55 150 70" stroke="#758296" stroke-width="1.2" stroke-linecap="round" opacity="0.5" />
+  <path d="M70 110 Q130 110 170 140" stroke="#758296" stroke-width="1.1" stroke-linecap="round" opacity="0.5" />
+  <path d="M100 160 Q150 170 175 200" stroke="#758296" stroke-width="1.0" stroke-linecap="round" opacity="0.45" />
+
+  <!-- Leaves along top branch -->
+  <path d="M60 63 C75 45 100 48 105 60 C95 72 75 70 60 63 Z" fill="#9aa5b5" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+  <path d="M95 57 C115 40 135 44 140 56 C130 68 110 65 95 57 Z" fill="#b0bac7" opacity="0.4" stroke="#68768a" stroke-width="0.9" />
+  <path d="M130 65 C150 52 170 60 165 72 C150 78 138 72 130 65 Z" fill="#9aa5b5" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+
+  <!-- Leaves along mid branch -->
+  <path d="M85 110 C105 95 130 98 132 112 C120 122 100 120 85 110 Z" fill="#9aa5b5" opacity="0.4" stroke="#68768a" stroke-width="0.9" />
+  <path d="M120 115 C142 105 162 112 160 126 C145 133 130 127 120 115 Z" fill="#b0bac7" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+  <path d="M148 128 C165 125 180 135 175 148 C160 150 152 140 148 128 Z" fill="#9aa5b5" opacity="0.3" stroke="#68768a" stroke-width="0.8" />
+
+  <!-- Leaves along main stem -->
+  <path d="M20 25 C35 10 55 15 52 30 C40 38 28 35 20 25 Z" fill="#b0bac7" opacity="0.4" stroke="#68768a" stroke-width="0.9" />
+  <path d="M35 50 C20 40 15 25 28 20 C38 28 40 42 35 50 Z" fill="#9aa5b5" opacity="0.3" stroke="#68768a" stroke-width="0.8" />
+  
+  <path d="M55 85 C42 80 35 65 48 58 C60 65 62 78 55 85 Z" fill="#b0bac7" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+  <path d="M75 125 C60 122 55 105 68 100 C78 107 80 118 75 125 Z" fill="#9aa5b5" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+  
+  <path d="M98 155 C82 152 78 138 90 132 C100 138 102 148 98 155 Z" fill="#b0bac7" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+  <path d="M120 190 C135 178 155 185 150 198 C138 205 128 198 120 190 Z" fill="#9aa5b5" opacity="0.35" stroke="#68768a" stroke-width="0.9" />
+  <path d="M135 210 C145 200 160 208 155 218 C145 222 138 217 135 210 Z" fill="#b0bac7" opacity="0.3" stroke="#68768a" stroke-width="0.8" />
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#1b2a4a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Center Person (Main) -->
+  <circle cx="32" cy="22" r="7" />
+  <path d="M22 52 C22 42 26 38 32 38 C38 38 42 42 42 52" />
+  
+  <!-- Left Person -->
+  <circle cx="18" cy="26" r="5" />
+  <path d="M10 52 C10 44 13 41 18 41 C20 41 22 42 23 44" />
+  
+  <!-- Right Person -->
+  <circle cx="46" cy="26" r="5" />
+  <path d="M41 44 C42 42 44 41 46 41 C51 41 54 44 54 52" />
+</svg>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración | Boda José & Sandy</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin-page-body">
+
+  <div class="admin-wrapper">
+
+    <!-- =======================================================================
+         BARRA SUPERIOR DE ACCIONES Y TÍTULO
+         ======================================================================= -->
+    <header class="admin-top-bar">
+      <div class="admin-top-title">
+        <h1>ADMINISTRADOR DE LA INVITACIÓN</h1>
+        <p>Edita textos, fechas, enlaces de mapas, cuentas bancarias, itinerario e imágenes</p>
+      </div>
+
+      <div class="admin-top-actions">
+        <button id="btnTopSave" class="btn-adm btn-adm-save">💾 Guardar Cambios</button>
+        <button id="btnDownloadJson" class="btn-adm btn-adm-download">📥 Descargar JSON</button>
+        <label for="importJsonInput" class="btn-adm btn-adm-outline" style="cursor: pointer;">
+          📂 Importar JSON
+          <input type="file" id="importJsonInput" accept=".json" style="display: none;">
+        </label>
+        <a href="index.html" target="_blank" class="btn-adm btn-adm-outline">👁️ Ver Invitación ↗</a>
+        <a href="guest-manager.html" target="_blank" class="btn-adm btn-adm-outline">👥 Gestor de Invitados ↗</a>
+        <button id="btnResetDefaults" class="btn-adm btn-adm-danger-outline" style="margin-left: 6px;">🔄 Restablecer</button>
+      </div>
+    </header>
+
+    <!-- =======================================================================
+         PESTAÑAS DE NAVEGACIÓN
+         ======================================================================= -->
+    <nav class="admin-tabs-nav" aria-label="Navegación de pestañas de configuración">
+      <button class="tab-btn active" data-tab="novios">💍 Novios & Contacto</button>
+      <button class="tab-btn" data-tab="fechas">📅 Fecha & Horarios</button>
+      <button class="tab-btn" data-tab="textos">✍️ Textos & Frases</button>
+      <button class="tab-btn" data-tab="ubicaciones">📍 Ubicaciones & Mapas</button>
+      <button class="tab-btn" data-tab="itinerario">⏱️ Itinerario</button>
+      <button class="tab-btn" data-tab="detalles">👗 Protocolo & Reglas</button>
+      <button class="tab-btn" data-tab="bancos">💳 Cuentas Bancarias</button>
+      <button class="tab-btn" data-tab="fotos">📸 Fotos & Galería</button>
+    </nav>
+
+    <!-- =======================================================================
+         PANEL 1: NOVIOS & CONTACTO
+         ======================================================================= -->
+    <section id="tab-novios" class="tab-panel active">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">💍 Datos de los Novios</h2>
+        
+        <div class="form-grid-2">
+          <!-- Novio -->
+          <div class="dynamic-item-card">
+            <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">🤵 El Novio</h3>
+            <div class="form-group">
+              <label for="groomFirstName">Nombre Corto / Primer Nombre:</label>
+              <input type="text" id="groomFirstName" class="form-input" placeholder="José">
+            </div>
+            <div class="form-group">
+              <label for="groomFullName">Nombre Completo:</label>
+              <input type="text" id="groomFullName" class="form-input" placeholder="José Alberto Herrera">
+            </div>
+            <div class="form-group">
+              <label for="groomPhone">Teléfono WhatsApp (Formato Internacional):</label>
+              <input type="text" id="groomPhone" class="form-input" placeholder="+50255551234">
+              <span class="form-hint">Para el enlace directo de confirmación (sin espacios ni guiones).</span>
+            </div>
+            <div class="form-group">
+              <label for="groomPhoneDisplay">Teléfono Visible en Invitación:</label>
+              <input type="text" id="groomPhoneDisplay" class="form-input" placeholder="+502 5555 1234">
+            </div>
+          </div>
+
+          <!-- Novia -->
+          <div class="dynamic-item-card">
+            <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">👰 La Novia</h3>
+            <div class="form-group">
+              <label for="brideFirstName">Nombre Corto / Primer Nombre:</label>
+              <input type="text" id="brideFirstName" class="form-input" placeholder="Sandy">
+            </div>
+            <div class="form-group">
+              <label for="brideFullName">Nombre Completo:</label>
+              <input type="text" id="brideFullName" class="form-input" placeholder="Sandy Peláez">
+            </div>
+            <div class="form-group">
+              <label for="bridePhone">Teléfono WhatsApp (Formato Internacional):</label>
+              <input type="text" id="bridePhone" class="form-input" placeholder="+50255555678">
+              <span class="form-hint">Para el enlace directo de confirmación (sin espacios ni guiones).</span>
+            </div>
+            <div class="form-group">
+              <label for="bridePhoneDisplay">Teléfono Visible en Invitación:</label>
+              <input type="text" id="bridePhoneDisplay" class="form-input" placeholder="+502 5555 5678">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 16px;">
+          <label for="monogram">Monograma / Iniciales de Encabezado:</label>
+          <input type="text" id="monogram" class="form-input" style="max-width: 280px;" placeholder="J | S">
+          <span class="form-hint">Aparece en la parte superior de la portada, sobre de lacre y pie de página.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 2: FECHA & HORARIOS
+         ======================================================================= -->
+    <section id="tab-fechas" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">📅 Fecha del Evento & Cuenta Regresiva</h2>
+        
+        <div class="form-grid-3">
+          <div class="form-group">
+            <label for="dateDay">Día (Número):</label>
+            <input type="text" id="dateDay" class="form-input" placeholder="28">
+          </div>
+          <div class="form-group">
+            <label for="dateMonth">Mes (Texto):</label>
+            <input type="text" id="dateMonth" class="form-input" placeholder="Noviembre">
+          </div>
+          <div class="form-group">
+            <label for="dateYear">Año (Número):</label>
+            <input type="text" id="dateYear" class="form-input" placeholder="2026">
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="form-group">
+            <label for="timeCeremony">Hora de Ceremonia:</label>
+            <input type="text" id="timeCeremony" class="form-input" placeholder="15:30">
+          </div>
+          <div class="form-group">
+            <label for="timeReception">Hora de Recepción:</label>
+            <input type="text" id="timeReception" class="form-input" placeholder="20:00">
+          </div>
+          <div class="form-group">
+            <label for="rsvpDeadline">Fecha Límite Confirmación (RSVP):</label>
+            <input type="text" id="rsvpDeadline" class="form-input" placeholder="10 de octubre de 2026">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dateIso">Fecha ISO para el Contador Regresivo & Calendario:</label>
+          <input type="text" id="dateIso" class="form-input" placeholder="2026-11-28T15:30:00-06:00">
+          <span class="form-hint">Formato estándar: <code>YYYY-MM-DDTHH:MM:SS-06:00</code> (utilizado para calcular los días restantes con precisión).</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 3: TEXTOS & FRASES
+         ======================================================================= -->
+    <section id="tab-textos" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">✍️ Frases y Textos de la Invitación</h2>
+
+        <div class="form-group">
+          <label for="coverSubtitle">Lema Superior de Portada:</label>
+          <input type="text" id="coverSubtitle" class="form-input" placeholder="EL COMIENZO DE NUESTRO PARA SIEMPRE">
+        </div>
+
+        <div class="form-group">
+          <label for="weAreGettingMarried">Texto Central Portada:</label>
+          <input type="text" id="weAreGettingMarried" class="form-input" placeholder="NOS CASAMOS">
+        </div>
+
+        <div class="form-group">
+          <label for="openingQuote">Frase Romántica Principal:</label>
+          <textarea id="openingQuote" class="form-textarea" placeholder="Porque juntos descubrimos que el amor hace la vida más hermosa..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="blessingIntro">Encabezado de Madres / Bendición:</label>
+          <input type="text" id="blessingIntro" class="form-input" placeholder="CON LA BENDICIÓN DE DIOS Y EL AMOR INCONDICIONAL DE NUESTRAS MADRES">
+        </div>
+
+        <div class="form-group">
+          <label for="mothers">Nombres de las Madres / Padres:</label>
+          <input type="text" id="mothers" class="form-input" placeholder="Lilian Peláez & Isabel de León">
+        </div>
+
+        <div class="form-group">
+          <label for="invitationCallout">Texto Formal de Invitación:</label>
+          <textarea id="invitationCallout" class="form-textarea" placeholder="Tenemos el honor de invitarte a acompañarnos en el día más importante..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="closingThanks">Texto de Agradecimiento Final:</label>
+          <input type="text" id="closingThanks" class="form-input" placeholder="GRACIAS POR SER PARTE DE ESTE DÍA TAN ESPECIAL PARA NOSOTROS.">
+        </div>
+
+        <div class="form-group">
+          <label for="seeYouThere">Frase de Despedida Cursiva:</label>
+          <input type="text" id="seeYouThere" class="form-input" placeholder="¡Nos vemos allí!">
+        </div>
+
+        <div class="form-group">
+          <label for="rsvpSubtitle">Instrucción de Confirmación RSVP:</label>
+          <textarea id="rsvpSubtitle" class="form-textarea" placeholder="Tu respuesta es importante para nosotros. Cada detalle ha sido preparado con mucho amor..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="rsvpWebhookUrl">🔗 URL de Google Apps Script (Webhook para Google Sheets):</label>
+          <input type="text" id="rsvpWebhookUrl" class="form-input" placeholder="https://script.google.com/macros/s/AKfycb.../exec">
+          <small style="color: #64748B; font-size: 0.78rem; display: block; margin-top: 4px;">
+            Pega aquí la URL de tu aplicación web de Google Apps Script. Las confirmaciones de asistencia se registrarán en tiempo real en tu Google Sheets.
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 4: UBICACIONES & MAPAS
+         ======================================================================= -->
+    <section id="tab-ubicaciones" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">📍 Lugares y Enlaces de Navegación</h2>
+
+        <!-- Ceremonia -->
+        <div class="dynamic-item-card" style="margin-bottom: 20px;">
+          <h3 style="font-size:1rem; margin-bottom:12px; color:var(--adm-navy);">⛪ Ceremonia Religiosa</h3>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="ceremonyTime">Hora / Texto:</label>
+              <input type="text" id="ceremonyTime" class="form-input" placeholder="15:30 HRS.">
+            </div>
+            <div class="form-group">
+              <label for="ceremonyVenue">Nombre de la Iglesia / Lugar:</label>
+              <input type="text" id="ceremonyVenue" class="form-input" placeholder="Iglesia San Juan Bautista">
+            </div>
+            <div class="form-group">
+              <label for="ceremonyCity">Ciudad / Municipio:</label>
+              <input type="text" id="ceremonyCity" class="form-input" placeholder="Antigua Guatemala">
+            </div>
+          </div>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="ceremonyWaze">Enlace Waze:</label>
+              <input type="text" id="ceremonyWaze" class="form-input" placeholder="https://waze.com/ul?q=...">
+            </div>
+            <div class="form-group">
+              <label for="ceremonyGoogle">Enlace Google Maps:</label>
+              <input type="text" id="ceremonyGoogle" class="form-input" placeholder="https://maps.google.com/?q=...">
+            </div>
+            <div class="form-group">
+              <label for="ceremonyApple">Enlace Apple Maps:</label>
+              <input type="text" id="ceremonyApple" class="form-input" placeholder="https://maps.apple.com/?q=...">
+            </div>
+          </div>
+        </div>
+
+        <!-- Recepción -->
+        <div class="dynamic-item-card">
+          <h3 style="font-size:1rem; margin-bottom:12px; color:var(--adm-navy);">🏛️ Recepción y Fiesta</h3>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="receptionTime">Hora / Texto:</label>
+              <input type="text" id="receptionTime" class="form-input" placeholder="20:00 HRS.">
+            </div>
+            <div class="form-group">
+              <label for="receptionVenue">Nombre de la Hacienda / Salón:</label>
+              <input type="text" id="receptionVenue" class="form-input" placeholder="Hacienda Santo Tomás">
+            </div>
+            <div class="form-group">
+              <label for="receptionAddress">Dirección:</label>
+              <input type="text" id="receptionAddress" class="form-input" placeholder="Santo Tomás, Milpas Altas, Sacatepéquez">
+            </div>
+          </div>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="receptionCity">Ciudad:</label>
+              <input type="text" id="receptionCity" class="form-input" placeholder="Antigua Guatemala">
+            </div>
+            <div class="form-group">
+              <label for="receptionWaze">Enlace Waze:</label>
+              <input type="text" id="receptionWaze" class="form-input" placeholder="https://waze.com/ul?q=...">
+            </div>
+            <div class="form-group">
+              <label for="receptionGoogle">Enlace Google Maps:</label>
+              <input type="text" id="receptionGoogle" class="form-input" placeholder="https://maps.google.com/?q=...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="receptionApple">Enlace Apple Maps:</label>
+            <input type="text" id="receptionApple" class="form-input" placeholder="https://maps.apple.com/?q=...">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 5: ITINERARIO
+         ======================================================================= -->
+    <section id="tab-itinerario" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">⏱️ Línea de Tiempo del Itinerario</h2>
+        <p style="font-size:0.85rem; color:#64748B; margin-bottom:16px;">
+          Agrega o edita los momentos clave del evento que se mostrarán en la línea de tiempo vertical de la invitación.
+        </p>
+
+        <!-- Lista Dinámica de Itinerario -->
+        <div id="itineraryListContainer" class="dynamic-items-container">
+          <!-- Se renderiza con JS -->
+        </div>
+
+        <button type="button" id="btnAddItinerary" class="btn-add-item">
+          ➕ Agregar Momento al Itinerario
+        </button>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 6: PROTOCOLO & DETALLES
+         ======================================================================= -->
+    <section id="tab-detalles" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">👗 Protocolo, Dress Code y Reglas</h2>
+
+        <!-- Código de Vestimenta -->
+        <div class="dynamic-item-card" style="margin-bottom: 20px;">
+          <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">🎀 Código de Vestimenta</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="dressCodeType">Tipo de Vestimenta:</label>
+              <input type="text" id="dressCodeType" class="form-input" placeholder="FORMAL / ETIQUETA / RIGUROSA">
+            </div>
+            <div class="form-group">
+              <label for="dressCodeSubtitle">Subtítulo:</label>
+              <input type="text" id="dressCodeSubtitle" class="form-input" placeholder="Traje formal">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="dressCodeNote">Nota Aclaratoria / Colores Reservados:</label>
+            <input type="text" id="dressCodeNote" class="form-input" placeholder="Dejemos los tonos blancos y sus derivados exclusivos para la novia.">
+          </div>
+        </div>
+
+        <!-- Regla de Adultos -->
+        <div class="dynamic-item-card" style="margin-bottom: 20px;">
+          <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">👥 Regla de Adultos / Sin Niños</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="childrenTitle">Título Principal:</label>
+              <input type="text" id="childrenTitle" class="form-input" placeholder="ADULTOS SOLAMENTE">
+            </div>
+            <div class="form-group">
+              <label for="childrenSubtitle">Subtítulo:</label>
+              <input type="text" id="childrenSubtitle" class="form-input" placeholder="Agradecemos su comprensión.">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="childrenNote">Nota Explicativa:</label>
+            <textarea id="childrenNote" class="form-textarea" placeholder="Un evento para adultos está en camino. ¡Así que prepárense para una noche llena de diversión!"></textarea>
+          </div>
+        </div>
+
+        <!-- Mesa de Regalos y Sobre de Deseos -->
+        <div class="dynamic-item-card">
+          <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">🎁 Mesa de Regalos & Lluvia de Sobres</h3>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="giftsTitle">Título Mesa de Regalos:</label>
+              <input type="text" id="giftsTitle" class="form-input" placeholder="MESA DE REGALOS">
+            </div>
+            <div class="form-group">
+              <label for="wishesTitle">Título Sobre de Deseos:</label>
+              <input type="text" id="wishesTitle" class="form-input" placeholder="SOBRE DE DESEOS">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="giftsDesc">Mensaje de Regalos:</label>
+            <textarea id="giftsDesc" class="form-textarea" placeholder="Su presencia es el mejor regalo, pero si desean tener un detalle..."></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="wishesDesc">Mensaje Sobre de Deseos:</label>
+            <input type="text" id="wishesDesc" class="form-input" placeholder="Habrá un sobre en recepción para sus bendiciones y deseos.">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 7: CUENTAS BANCARIAS
+         ======================================================================= -->
+    <section id="tab-bancos" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">💳 Cuentas Bancarias para Transferencias</h2>
+        <p style="font-size:0.85rem; color:#64748B; margin-bottom:16px;">
+          Estas cuentas aparecerán con botones rápidos de <strong>Copiar Cuenta en 1-Clic</strong> para facilitar el depósito de regalos a los invitados.
+        </p>
+
+        <!-- Lista Dinámica de Cuentas Bancarias -->
+        <div id="bankAccountsListContainer" class="dynamic-items-container">
+          <!-- Se renderiza con JS -->
+        </div>
+
+        <button type="button" id="btnAddBank" class="btn-add-item">
+          ➕ Agregar Otra Cuenta Bancaria
+        </button>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 8: FOTOS & GALERÍA
+         ======================================================================= -->
+    <section id="tab-fotos" class="tab-panel">
+      <div class="admin-section-card">
+        <h2 class="admin-section-title">📸 Fotografías Principales & Galería</h2>
+
+        <!-- Foto de Portada -->
+        <div class="dynamic-item-card" style="margin-bottom: 20px;">
+          <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">🌄 Foto de Portada (Hero)</h3>
+          <div class="image-preview-wrapper">
+            <div class="image-preview-box">
+              <img id="heroPhotoPreview" src="assets/images/couple-hero.jpg" alt="Foto Portada">
+            </div>
+            <div class="image-inputs-col">
+              <div class="form-group">
+                <label for="heroPhotoUrl">Ruta / URL de la Imagen:</label>
+                <input type="text" id="heroPhotoUrl" class="form-input" placeholder="assets/images/couple-hero.jpg">
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label>O sube una imagen desde tu computadora:</label>
+                <input type="file" id="heroPhotoFileInput" class="form-input" accept="image/*">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto de Cierre -->
+        <div class="dynamic-item-card" style="margin-bottom: 20px;">
+          <h3 style="font-size:0.95rem; margin-bottom:12px; color:var(--adm-navy);">🌅 Foto de Cierre (Despedida)</h3>
+          <div class="image-preview-wrapper">
+            <div class="image-preview-box">
+              <img id="closingPhotoPreview" src="assets/images/couple-closing.jpg" alt="Foto Cierre">
+            </div>
+            <div class="image-inputs-col">
+              <div class="form-group">
+                <label for="closingPhotoUrl">Ruta / URL de la Imagen:</label>
+                <input type="text" id="closingPhotoUrl" class="form-input" placeholder="assets/images/couple-closing.jpg">
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label>O sube una imagen desde tu computadora:</label>
+                <input type="file" id="closingPhotoFileInput" class="form-input" accept="image/*">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galería "Nuestros Momentos" -->
+        <div class="dynamic-item-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
+            <div>
+              <h3 style="font-size:0.95rem; margin:0 0 4px 0; color:var(--adm-navy);">🖼️ Galería "Nuestros Momentos" (Lightbox)</h3>
+              <p style="font-size:0.8rem; color:#64748B; margin:0;">Las fotos añadidas aquí son exclusivas de la galería y no se mezclan con las fotos de inicio y cierre.</p>
+            </div>
+            <div>
+              <input type="file" id="bulkGalleryUpload" multiple accept="image/*" style="display:none;">
+              <button type="button" class="btn-bulk-upload" onclick="document.getElementById('bulkGalleryUpload').click()">
+                📁 Subir Fotos desde tu Computadora
+              </button>
+            </div>
+          </div>
+          
+          <div id="galleryListContainer" class="admin-gallery-grid">
+            <!-- Se renderiza con JS -->
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+            <button type="button" id="btnAddGalleryPhoto" class="btn-add-item" style="flex:1;">
+              ➕ Agregar Espacio para Foto
+            </button>
+            <button type="button" class="btn-add-item" style="flex:1; background:#0F766E; color:#FFFFFF; border-color:#0F766E;" onclick="document.getElementById('bulkGalleryUpload').click()">
+              📁 Subir Múltiples Fotos a la vez
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- =========================================================================
+       BARRA INFERIOR FLOTANTE DE GUARDADO RÁPIDO
+       ========================================================================= -->
+  <aside class="admin-bottom-bar">
+    <div class="bottom-bar-inner">
+      <span style="font-size:0.85rem; color:#CBD5E1;">
+        ✨ Los cambios guardados se reflejan inmediatamente en la invitación web.
+      </span>
+      <div style="display: flex; gap: 10px;">
+        <a href="index.html" target="_blank" class="btn-adm btn-adm-outline">👁️ Probar Invitación</a>
+        <button id="btnBottomSave" class="btn-adm btn-adm-save">💾 Guardar Cambios</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Notificación Toast -->
+  <div id="adminToast" class="admin-toast" role="alert"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

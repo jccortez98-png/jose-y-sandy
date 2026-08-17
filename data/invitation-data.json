@@ -1,0 +1,171 @@
+{
+  "wedding": {
+    "couple": {
+      "groom": {
+        "firstName": "José",
+        "fullName": "José Alberto Herrera",
+        "phone": "+50255551234",
+        "phoneDisplay": "+502 5555 1234"
+      },
+      "bride": {
+        "firstName": "Sandy",
+        "fullName": "Sandy Peláez",
+        "phone": "+50255555678",
+        "phoneDisplay": "+502 5555 5678"
+      },
+      "monogram": "J | S",
+      "initialsGroom": "J",
+      "initialsBride": "S"
+    },
+    "date": {
+      "day": "28",
+      "month": "Noviembre",
+      "monthNumber": "11",
+      "year": "2026",
+      "dayOfWeek": "Sábado",
+      "timeCeremony": "16:30",
+      "timeReception": "20:00",
+      "isoDateTime": "2026-11-28T15:30:00-06:00",
+      "rsvpDeadline": "10 de octubre de 2026"
+    },
+    "texts": {
+      "coverSubtitle": "EL COMIENZO DE NUESTRO PARA SIEMPRE",
+      "weAreGettingMarried": "NOS CASAMOS",
+      "openingQuote": "Porque juntos descubrimos que el amor hace la vida más hermosa, hemos decidido caminar de la mano para siempre.",
+      "blessingIntro": "CON LA BENDICIÓN DE DIOS Y EL AMOR INCONDICIONAL DE NUESTRAS MADRES",
+      "mothers": "Silvia Matias & Maria Eugenia López",
+      "invitationCallout": "Tenemos el honor de invitarte a acompañarnos en el día más importante de nuestras vidas y ser parte del inicio de esta nueva historia que, con ilusión y esperanza, comenzaremos a escribir para siempre.",
+      "closingThanks": "GRACIAS POR SER PARTE DE ESTE DÍA TAN ESPECIAL PARA NOSOTROS.",
+      "seeYouThere": "¡Nos vemos allá!",
+      "rsvpTitle": "CONFIRMAR ASISTENCIA",
+      "rsvpSubtitle": "Tu respuesta es importante para nosotros. Cada detalle ha sido preparado con mucho amor. Te agradeceremos confirmar tu asistencia antes del 10 de octubre de 2026.",
+      "rsvpWebhookUrl": "https://script.google.com/macros/s/AKfycbxfhtc4xysHdsvCyXQNOV9-BfPxo2U4Kn1HrkoILWHIn_c1Q3K5uvyMyuNgHaDORAsH/exec"
+    },
+    "locations": {
+      "ceremony": {
+        "title": "CEREMONIA",
+        "time": "16:30 HRS.",
+        "venue": "Restaurante La Quinta",
+        "city": "Santo Tomás, Milpas Altas, Sacatepéquez",
+        "wazeUrl": "https://ul.waze.com/ul?venue_id=176488594.1765082545.26635606&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+        "googleMapsUrl": "https://maps.app.goo.gl/MLLNBBGp6Gv4Banh9",
+        "appleMapsUrl": "https://maps.apple/p/ip.DTJIDZr9-RR"
+      },
+      "reception": {
+        "title": "RECEPCIÓN",
+        "time": "20:00 HRS.",
+        "venue": "Restaurante La Quinta",
+        "address": "Santo Tomás, Milpas Altas",
+        "city": "Sacatepéquez",
+        "wazeUrl": "https://ul.waze.com/ul?venue_id=176488594.1765082545.26635606&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+        "googleMapsUrl": "https://maps.app.goo.gl/MLLNBBGp6Gv4Banh9",
+        "appleMapsUrl": "https://maps.apple/p/ip.DTJIDZr9-RR"
+      }
+    },
+    "itinerary": [
+      {
+        "time": "16:30",
+        "title": "CEREMONIA",
+        "icon": "rings",
+        "description": "Ceremonia"
+      },
+      {
+        "time": "17:30",
+        "title": "CÓCTEL DE BIENVENIDA",
+        "icon": "cocktail",
+        "description": "Cóctel"
+      },
+      {
+        "time": "19:00",
+        "title": "CENA",
+        "icon": "dinner",
+        "description": "Cena"
+      },
+      {
+        "time": "20:00",
+        "title": "FIESTA",
+        "icon": "celebration",
+        "description": "Fiesta"
+      }
+    ],
+    "details": {
+      "dressCode": {
+        "title": "CÓDIGO DE VESTIMENTA",
+        "type": "FORMAL",
+        "subtitle": "Traje formal",
+        "note": "Dejemos los tonos blancos y sus derivados exclusivos para la novia.",
+        "icon": "bowtie"
+      },
+      "children": {
+        "title": "SOLO ADULTOS",
+        "subtitle": "Agradecemos su comprensión.",
+        "note": "Un evento para adultos está en camino. ¡Así que prepárense para una noche llena de diversión! Dejemos a los niños en casa esta vez.",
+        "icon": "adults"
+      },
+      "gifts": {
+        "title": "BUZÓN DE LOS DESEOS",
+        "description": "Su presencia en nuestra boda es el mejor regalo que podemos recibir. Si desean tener un detalle con nosotros, un aporte en efectivo será muy apreciado.",
+        "icon": "gift"
+      },
+      "bankAccounts": [
+        {
+          "bank": "Banrural",
+          "accountHolder": "Sandy Peláez",
+          "accountType": "Cuenta de Ahorro",
+          "accountNumber": "4404152723"
+        }
+      ],
+      "envelopeWishes": {
+        "title": "BUZÓN DE LOS DESEOS",
+        "description": "Habrá un sobre en la recepción para sus bendiciones y deseos.",
+        "icon": "envelope"
+      }
+    },
+    "gallery": [
+      {
+        "url": "assets/images/couple-hero.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      },
+      {
+        "url": "assets/images/4.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      },
+      {
+        "url": "assets/images/5.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      },
+      {
+        "url": "assets/images/couple-closing.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      },
+      {
+        "url": "assets/images/7.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      },
+      {
+        "url": "assets/images/1.jpg",
+        "alt": "Foto Boda",
+        "caption": "Nuevo momento inolvidable"
+      }
+    ],
+    "music": {
+      "enabled": true,
+      "autoplayAfterEnvelope": true,
+      "title": "Melodía Acústica Romántica",
+      "src": "assets/audio/wedding-ambient.mp3"
+    },
+    "envelope": {
+      "sealInitials": "JS",
+      "instruction": "Toca el sello para abrir la invitación"
+    },
+    "photos": {
+      "hero": "assets/images/couple-hero.jpg",
+      "closing": "assets/images/couple-closing.jpg"
+    }
+  }
+}

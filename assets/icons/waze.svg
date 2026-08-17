@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <path d="M52 30 C52 41 43 50 32 50 C29 50 25.5 49 22.5 47.5 L12 50 L14 42 C10 38.5 8 34.5 8 30 C8 17.8 18.7 8 32 8 C44 8 52 17.5 52 30 Z" fill="#33CCFF" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Wheels -->
+  <circle cx="21" cy="51" r="5" fill="#FFFFFF" stroke="#1b2a4a" stroke-width="1.8" />
+  <circle cx="43" cy="51" r="5" fill="#FFFFFF" stroke="#1b2a4a" stroke-width="1.8" />
+  <!-- Eyes -->
+  <circle cx="25" cy="27" r="3" fill="#1b2a4a" />
+  <circle cx="39" cy="27" r="3" fill="#1b2a4a" />
+  <!-- Smile -->
+  <path d="M28 36 C30 39 34 39 36 36" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" />
+</svg>

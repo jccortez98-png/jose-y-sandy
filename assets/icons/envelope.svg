@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#1b2a4a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Envelope rectangle -->
+  <rect x="8" y="16" width="48" height="34" rx="2" />
+  <!-- Envelope Flap -->
+  <path d="M8 18 L32 36 L56 18" />
+  <!-- Bottom corner folds -->
+  <line x1="8" y1="50" x2="24" y2="34" />
+  <line x1="56" y1="50" x2="40" y2="34" />
+</svg>

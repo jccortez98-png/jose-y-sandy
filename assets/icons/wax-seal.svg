@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <!-- Wax Seal Shadow Filter -->
+    <filter id="waxShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#07101e" flood-opacity="0.3" />
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#07101e" flood-opacity="0.2" />
+    </filter>
+    <!-- Radial subtle gradient for ivory wax -->
+    <radialGradient id="waxGradient" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f5f2eb" />
+      <stop offset="100%" stop-color="#e3ded3" />
+    </radialGradient>
+    <radialGradient id="innerWaxGradient" cx="48%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fcfbfa" />
+      <stop offset="85%" stop-color="#ece7dd" />
+      <stop offset="100%" stop-color="#ded8cc" />
+    </radialGradient>
+  </defs>
+
+  <!-- Organic Wax Outer Rim -->
+  <path d="M80 8 C100 6, 120 12, 136 28 C152 44, 156 65, 153 88 C150 110, 142 130, 124 144 C106 158, 80 156, 58 153 C36 150, 16 138, 9 116 C2 94, 8 70, 18 50 C28 30, 55 10, 80 8 Z" fill="url(#waxGradient)" filter="url(#waxShadow)" stroke="#ece5d8" stroke-width="2" />
+
+  <!-- Inner Recessed Circle -->
+  <circle cx="80" cy="80" r="54" fill="url(#innerWaxGradient)" stroke="#dcd3c4" stroke-width="1.5" />
+  
+  <!-- Subtle Embossed Laurel Leaves -->
+  <!-- Left Laurel Wreath -->
+  <path d="M42 96 C40 70 54 50 64 42" stroke="#b8ad9c" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.8" />
+  <path d="M46 88 C40 85 41 78 47 80 C50 82 49 87 46 88 Z" fill="#cfc5b4" opacity="0.85" />
+  <path d="M46 72 C41 68 43 62 49 65 C52 68 50 72 46 72 Z" fill="#cfc5b4" opacity="0.85" />
+  <path d="M54 56 C50 50 54 45 59 49 C61 53 58 57 54 56 Z" fill="#cfc5b4" opacity="0.85" />
+
+  <!-- Right Laurel Wreath -->
+  <path d="M118 96 C120 70 106 50 96 42" stroke="#b8ad9c" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.8" />
+  <path d="M114 88 C120 85 119 78 113 80 C110 82 111 87 114 88 Z" fill="#cfc5b4" opacity="0.85" />
+  <path d="M114 72 C119 68 117 62 111 65 C108 68 110 72 114 72 Z" fill="#cfc5b4" opacity="0.85" />
+  <path d="M106 56 C110 50 106 45 101 49 C99 53 102 57 106 56 Z" fill="#cfc5b4" opacity="0.85" />
+
+  <!-- Monogram Initials JS -->
+  <text x="80" y="93" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', 'Cormorant Garamond', 'Georgia', serif" font-size="34" font-weight="600" letter-spacing="3" fill="#6c6356" opacity="0.95" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.9), -1px -1px 2px rgba(0,0,0,0.18);">J | S</text>
+
+  <!-- Small star / diamond at bottom -->
+  <circle cx="80" cy="116" r="2.5" fill="#a49988" />
+</svg>

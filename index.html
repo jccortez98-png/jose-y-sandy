@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title id="pageTitle">Boda José & Sandy | 28 de Noviembre 2026</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Invitación de boda de José & Sandy. El comienzo de nuestro para siempre. 28 de Noviembre de 2026, Antigua Guatemala.">
+  <meta property="og:title" content="Boda José & Sandy 💍">
+  <meta property="og:description" content="Tenemos el honor de invitarte a celebrar nuestra boda. 28 de Noviembre de 2026.">
+  <meta property="og:image" content="assets/images/couple-hero.jpg" id="ogImage">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/envelope.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       EXPERIENCIA DE APERTURA: SOBRE DIGITAL Y SELLO DE LACRE INTERACTIVO
+       ========================================================================= -->
+  <aside id="envelopeOverlay" class="envelope-overlay" aria-label="Sobre digital de invitación" onclick="window.openWeddingEnvelope && window.openWeddingEnvelope(event)">
+    <div class="envelope-bg-pattern"></div>
+    <div class="envelope-wrapper">
+      <div id="envelope" class="envelope" onclick="window.openWeddingEnvelope && window.openWeddingEnvelope(event)">
+        <div class="envelope-top-flap"></div>
+        <div class="envelope-bottom-flap"></div>
+        <div class="envelope-left-flap"></div>
+        <div class="envelope-right-flap"></div>
+
+        <!-- Sello de Lacre Oficial "JS" con Follaje y Flores -->
+        <button id="waxSealBtn" class="wax-seal-btn" title="Toca el sello para abrir" aria-label="Abrir invitación de boda" onclick="window.openWeddingEnvelope && window.openWeddingEnvelope(event)">
+          <img src="assets/images/wax-seal-raw-nobg.png" alt="Sello de Lacre Oficial JS" width="240" height="240">
+        </button>
+      </div>
+
+      <div class="envelope-hint" onclick="window.openWeddingEnvelope && window.openWeddingEnvelope(event)">
+        <span>Toca el sello para abrir</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       CONTENEDOR PRINCIPAL DE LA INVITACIÓN (MOBILE-FIRST)
+       ========================================================================= -->
+  <main class="invitation-container" id="mainInvitation">
+
+    <!-- Esquinas Botánicas Decorativas -->
+    <img src="assets/icons/botanical-corner.svg" class="botanical-corner top-left" alt="" aria-hidden="true">
+    <img src="assets/icons/botanical-corner.svg" class="botanical-corner top-right" alt="" aria-hidden="true">
+
+    <!-- =======================================================================
+         PANEL 1: PORTADA, NOVIOS Y FECHA (100% FIEL A REFERENCIA)
+         ======================================================================= -->
+    <header class="invitation-section section-hero">
+      
+      <!-- Monograma J | S -->
+      <div class="monogram-header" id="monogramDisplay">J | S</div>
+      
+      <!-- Subtítulo Superior -->
+      <p class="cover-subtitle" id="coverSubtitleDisplay">EL COMIENZO DE<br>NUESTRO PARA SIEMPRE</p>
+      <div class="cover-line"></div>
+
+      <!-- Nombres en Cursiva Marina -->
+      <div class="couple-names-wrapper">
+        <h1 class="couple-name" id="groomNameDisplay">José</h1>
+        <span class="ampersand">&</span>
+        <h1 class="couple-name" id="brideNameDisplay">Sandy</h1>
+      </div>
+
+      <!-- Texto Nos Casamos -->
+      <h2 class="we-are-marrying" id="weAreMarryingDisplay">NOS CASAMOS</h2>
+
+      <!-- Fecha Destacada -->
+      <div class="date-block">
+        <span class="date-day" id="dateDayDisplay">28</span>
+        <span class="date-month" id="dateMonthDisplay">NOVIEMBRE</span>
+        <span class="date-year" id="dateYearDisplay">2 0 2 6</span>
+      </div>
+
+      <!-- Divisor de Rama Botánica -->
+      <img src="assets/icons/botanical-branch-horizontal.svg" class="botanical-branch-divider" alt="" aria-hidden="true">
+
+      <!-- Fotografía de Portada de los Novios -->
+      <div class="hero-photo-container">
+        <img src="assets/images/couple-hero.jpg" alt="José y Sandy" class="hero-photo-img" id="heroPhoto">
+      </div>
+    </header>
+
+    <!-- Frase Romántica & Bendición de Madres -->
+    <section class="invitation-section quote-box">
+      <p class="quote-text" id="openingQuoteDisplay">
+        "Porque juntos descubrimos que el amor hace la vida más hermosa, hemos decidido caminar de la mano para siempre."
+      </p>
+      
+      <div class="section-divider">
+        <div class="section-divider-dot"></div>
+      </div>
+
+      <div class="blessing-section">
+        <p class="blessing-intro" id="blessingIntroDisplay">CON LA BENDICIÓN DE DIOS Y EL AMOR INCONDICIONAL DE NUESTRAS MADRES</p>
+        <p class="mothers-names" id="mothersDisplay">Silvia Matias<br>&<br>Maria Eugenia López</p>
+        <p class="invitation-callout" id="invitationCalloutDisplay">
+          Tenemos el honor de invitarte a acompañarnos en el día más importante de nuestras vidas y ser parte del inicio de esta nueva historia que, con ilusión y esperanza, comenzaremos a escribir para siempre.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cuenta Regresiva & Reserva la Fecha -->
+    <section class="countdown-container" aria-label="Cuenta regresiva para la boda">
+      <div class="countdown-title">
+        <img src="assets/icons/calendar.svg" alt="" style="width: 14px; height: 14px;">
+        RESERVA LA FECHA
+      </div>
+
+      <div class="countdown-grid">
+        <div class="countdown-box">
+          <span class="countdown-num" id="daysNum">00</span>
+          <span class="countdown-label">DÍAS</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-num" id="hoursNum">00</span>
+          <span class="countdown-label">HORAS</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-num" id="minsNum">00</span>
+          <span class="countdown-label">MINUTOS</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-num" id="secsNum">00</span>
+          <span class="countdown-label">SEGUNDOS</span>
+        </div>
+      </div>
+
+      <!-- Botón para agendar en Google Calendar -->
+      <a href="#" id="btnGoogleCalendar" class="btn-calendar" title="Agendar en Google Calendar">
+        <img src="assets/icons/calendar.svg" alt=""> AGENDAR EN CALENDARIO
+      </a>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 2: CEREMONIA, RECEPCIÓN E ITINERARIO
+         ======================================================================= -->
+    <section class="invitation-section" id="ceremonia-recepcion">
+      <h2 class="section-title">CEREMONIA & RECEPCIÓN</h2>
+      <div class="section-divider">
+        <div class="section-divider-dot"></div>
+      </div>
+
+      <!-- Bloque Ceremonia -->
+      <div class="venue-card">
+        <div class="venue-icon-wrapper">
+          <img src="assets/icons/rings.svg" alt="Anillos de boda">
+        </div>
+        <div class="venue-time" id="ceremonyTimeDisplay">15:30 HRS.</div>
+        <div class="venue-title">CEREMONIA</div>
+        <div class="venue-name" id="ceremonyVenueDisplay">IGLESIA SAN JUAN BAUTISTA</div>
+        <div class="venue-city" id="ceremonyCityDisplay">Antigua Guatemala</div>
+      </div>
+
+      <!-- Bloque Recepción -->
+      <div class="venue-card">
+        <div class="venue-icon-wrapper">
+          <img src="assets/icons/hacienda.svg" alt="Icono Hacienda">
+        </div>
+        <div class="venue-time" id="receptionTimeDisplay">20:00 HRS.</div>
+        <div class="venue-title">RECEPCIÓN</div>
+        <div class="venue-name" id="receptionVenueDisplay">HACIENDA SANTO TOMÁS</div>
+        <div class="venue-city" id="receptionCityDisplay">Santo Tomás, Milpas Altas, Sacatepéquez</div>
+      </div>
+
+      <!-- Botón Ver Ubicación (Abre selector Waze / Google Maps / Apple Maps) -->
+      <button id="btnVerUbicacion" class="btn-pill-navy">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 6 C20.95 6 12 14.95 12 26 C12 39.5 32 58 32 58 C32 58 52 39.5 52 26 C52 14.95 43.05 6 32 6 Z"/>
+          <circle cx="32" cy="26" r="7"/>
+        </svg>
+        VER UBICACIÓN
+      </button>
+
+      <!-- Subsección Itinerario -->
+      <h2 class="section-title">ITINERARIO</h2>
+      <div class="section-divider">
+        <div class="section-divider-dot"></div>
+      </div>
+
+      <!-- Línea de tiempo vertical -->
+      <div class="timeline-container" id="timelineContainer">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon-box">
+            <img src="assets/icons/rings.svg" alt="Anillos">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">15:30</span>
+            <span class="timeline-title">CEREMONIA</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon-box">
+            <img src="assets/icons/cocktail.svg" alt="Cóctel">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">17:00</span>
+            <span class="timeline-title">CÓCTEL DE BIENVENIDA</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon-box">
+            <img src="assets/icons/dinner.svg" alt="Cena">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">20:00</span>
+            <span class="timeline-title">CENA</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon-box">
+            <img src="assets/icons/celebration.svg" alt="Celebración">
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">23:00</span>
+            <span class="timeline-title">CELEBRACIÓN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 3: DETALLES DEL EVENTO (DRESS CODE, REGALOS, CUENTAS)
+         ======================================================================= -->
+    <section class="invitation-section" id="detalles">
+      <h2 class="section-title">DETALLES</h2>
+      <div class="section-divider">
+        <div class="section-divider-dot"></div>
+      </div>
+
+      <!-- Código de Vestimenta -->
+      <div class="detail-item">
+        <div class="detail-icon-box">
+          <img src="assets/icons/bowtie.svg" alt="Corbatín">
+        </div>
+        <div class="detail-title">CÓDIGO DE VESTIMENTA</div>
+        <div class="detail-highlight" id="dressCodeTypeDisplay">FORMAL</div>
+        <div class="detail-text" id="dressCodeSubtitleDisplay">Traje formal</div>
+        <div class="detail-note" id="dressCodeNoteDisplay">Dejemos los tonos blancos y sus derivados exclusivos para la novia.</div>
+      </div>
+
+      <!-- Regla de Adultos -->
+      <div class="detail-item">
+        <div class="detail-icon-box">
+          <img src="assets/icons/adults.svg" alt="Adultos">
+        </div>
+        <div class="detail-highlight" id="adultsTitleDisplay">ADULTOS SOLAMENTE</div>
+        <div class="detail-text" id="adultsSubtitleDisplay">Agradecemos su comprensión.</div>
+        <div class="detail-note" id="adultsNoteDisplay">Un evento para adultos está en camino. ¡Así que prepárense para una noche llena de diversión! Dejemos a los niños en casa esta vez.</div>
+      </div>
+
+      <!-- Mesa de Regalos / Lluvia de Sobres -->
+      <div class="detail-item">
+        <div class="detail-icon-box">
+          <img src="assets/icons/gift.svg" alt="Regalo">
+        </div>
+        <div class="detail-title" id="giftsTitleDisplay">MESA DE REGALOS</div>
+        <div class="detail-text" id="giftsDescDisplay">
+          Su presencia es el mejor regalo, pero si desean tener un detalle con nosotros, agradeceremos su contribución a nuestra mesa de regalos o transferencia bancaria:
+        </div>
+
+        <!-- Cuentas Bancarias con Botón 1-Clic Copiar -->
+        <div class="bank-cards-grid" id="bankCardsGrid">
+          <!-- Banrural -->
+          <div class="bank-card">
+            <div class="bank-name">BANRURAL</div>
+            <div class="bank-account-num">4404152723</div>
+            <div class="bank-holder">Sandy Peláez • Cuenta de Ahorro</div>
+            <button class="btn-copy-account" data-account="4404152723">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copiar Cuenta
+            </button>
+          </div>
+
+          <!-- Banco Industrial -->
+          <div class="bank-card">
+            <div class="bank-name">BANCO INDUSTRIAL</div>
+            <div class="bank-account-num">123-456789-0</div>
+            <div class="bank-holder">José Alberto Herrera • Cuenta Monetaria</div>
+            <button class="btn-copy-account" data-account="1234567890">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copiar Cuenta
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sobre de Deseos -->
+      <div class="detail-item" style="margin-top: 10px;">
+        <div class="detail-icon-box">
+          <img src="assets/icons/envelope.svg" alt="Sobre">
+        </div>
+        <div class="detail-title" id="wishesTitleDisplay">SOBRE DE DESEOS</div>
+        <div class="detail-text" id="wishesDescDisplay">Habrá un sobre en recepción para sus bendiciones y deseos.</div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         GALERÍA DE FOTOS ("NUESTROS MOMENTOS")
+         ======================================================================= -->
+    <section class="invitation-section gallery-section">
+      <h2 class="gallery-title-script">Nuestros Momentos</h2>
+      <div class="section-divider">
+        <div class="section-divider-dot"></div>
+      </div>
+
+      <!-- Grid de Galería -->
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item">
+          <img src="assets/images/gallery-1.jpg" alt="Anillos de boda" data-caption="Nuestra promesa de amor">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery-2.jpg" alt="Momentos felices" data-caption="Caminando juntos siempre">
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PANEL 4: FOTO FINAL, CIERRE & CONFIRMACIÓN (RSVP)
+         ======================================================================= -->
+    <section class="invitation-section" id="confirmacion">
+      
+      <!-- Monograma Cierre -->
+      <div class="closing-monogram" id="closingMonogramDisplay">J | S</div>
+      <img src="assets/icons/botanical-branch-horizontal.svg" class="botanical-branch-divider" alt="" aria-hidden="true" style="margin-top: 4px; margin-bottom: 20px;">
+
+      <!-- Fotografía de los Novios Caminando -->
+      <div class="closing-photo-container">
+        <img src="assets/images/couple-closing.jpg" alt="José & Sandy de la mano" class="closing-photo-img" id="closingPhoto">
+      </div>
+
+      <!-- Texto de Agradecimiento -->
+      <p class="closing-thanks-text" id="closingThanksDisplay">
+        GRACIAS POR SER PARTE DE ESTE DÍA TAN ESPECIAL PARA NOSOTROS.
+      </p>
+
+      <!-- Frase ¡Nos vemos allí! en script -->
+      <div class="see-you-there-script" id="seeYouThereDisplay">¡Nos vemos allí!</div>
+
+      <!-- Corazón sutil -->
+      <img src="assets/icons/heart.svg" class="closing-heart" alt="Corazón" aria-hidden="true">
+
+      <!-- Badge de Pases Asignados (si la URL contiene ?pases=X) -->
+      <div id="passesBadgeBox" class="passes-badge-container" style="display: none;">
+        <div class="passes-badge-pill" id="passesDisplay">INVITACIÓN PARA 2 PERSONAS</div>
+      </div>
+
+      <!-- Título de Confirmación -->
+      <h2 class="section-title" style="margin-bottom: 8px;">CONFIRMAR ASISTENCIA</h2>
+      <p class="detail-text" id="rsvpSubtitleDisplay" style="margin-bottom: 18px; font-size: 0.95rem;">
+        Te agradeceremos confirmar tu asistencia antes del <strong>10 de octubre de 2026</strong>.
+      </p>
+
+      <!-- Formulario Dinámico de Confirmación (RSVP) -->
+      <form id="rsvpForm" class="rsvp-form" novalidate>
+        
+        <!-- Lista dinámica de asistentes por pase -->
+        <div id="rsvpAttendeesContainer" class="rsvp-attendees-container">
+          <!-- Se llena dinámicamente con app.js -->
+        </div>
+
+        <!-- Campo opcional de mensaje / notas especiales -->
+        <div class="rsvp-field-group">
+          <label for="rsvpMessageInput" class="rsvp-field-label">Mensaje para los novios o notas especiales (opcional):</label>
+          <textarea id="rsvpMessageInput" class="rsvp-textarea" rows="3" placeholder="Escribe tus buenos deseos o restricciones alimentarias..."></textarea>
+        </div>
+
+        <!-- Botón de Envío -->
+        <button type="submit" id="btnSubmitRsvp" class="btn-submit-rsvp">
+          <span class="btn-text">ENVIAR CONFIRMACIÓN</span>
+          <span class="btn-spinner" style="display: none;">
+            <svg class="spinner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="12" cy="12" r="10" stroke-dasharray="32"/></svg>
+            Enviando...
+          </span>
+        </button>
+
+        <!-- Feedback / Estado de Confirmación -->
+        <div id="rsvpStatusAlert" class="rsvp-status-alert" style="display: none;"></div>
+      </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="invitation-footer">
+      <div class="footer-monogram" id="footerMonogram">J | S</div>
+      <p class="footer-credits" id="footerCredits">28 . 11 . 2026 • ANTIGUA GUATEMALA</p>
+    </footer>
+
+    <!-- Esquinas Botánicas Inferiores -->
+    <img src="assets/icons/botanical-corner.svg" class="botanical-corner bottom-left" alt="" aria-hidden="true">
+    <img src="assets/icons/botanical-corner.svg" class="botanical-corner bottom-right" alt="" aria-hidden="true">
+  </main>
+
+  <!-- =========================================================================
+       BOTÓN FLOTANTE DE MÚSICA AMBIENTAL
+       ========================================================================= -->
+  <button id="floatingMusicBtn" class="floating-music-control" title="Música ambiental" aria-label="Controlar música de fondo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+    </svg>
+  </button>
+
+  <!-- =========================================================================
+       MODAL DE UBICACIÓN (WAZE / GOOGLE MAPS / APPLE MAPS)
+       ========================================================================= -->
+  <div id="locationModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar modal">&times;</button>
+      <h3 class="modal-title">CÓMO LLEGAR</h3>
+      <p class="modal-subtitle" id="modalLocationSubtitle">Hacienda Santo Tomás, Milpas Altas</p>
+      
+      <div class="map-options-list">
+        <a href="https://waze.com/ul?q=Hacienda+Santo+Tomas+Milpas+Altas+Sacatepequez&navigate=yes" target="_blank" rel="noopener noreferrer" id="modalWazeBtn" class="btn-map-option">
+          <img src="assets/icons/waze.svg" alt="Waze">
+          <span>Abrir en Waze</span>
+        </a>
+        <a href="https://maps.google.com/?q=Hacienda+Santo+Tomas+Milpas+Altas" target="_blank" rel="noopener noreferrer" id="modalGoogleBtn" class="btn-map-option">
+          <img src="assets/icons/google-maps.svg" alt="Google Maps">
+          <span>Abrir en Google Maps</span>
+        </a>
+        <a href="https://maps.apple.com/?q=Hacienda+Santo+Tomas+Milpas+Altas" target="_blank" rel="noopener noreferrer" id="modalAppleBtn" class="btn-map-option">
+          <img src="assets/icons/map-pin.svg" alt="Apple Maps">
+          <span>Abrir en Apple Maps</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL LIGHTBOX PARA FOTOS
+       ========================================================================= -->
+  <div id="galleryLightbox" class="lightbox-overlay" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar foto">&times;</button>
+    <div class="lightbox-img-wrapper">
+      <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Standard Script Tag -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
