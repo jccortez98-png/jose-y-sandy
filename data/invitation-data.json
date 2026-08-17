@@ -104,7 +104,7 @@
       },
       "gifts": {
         "title": "BUZÓN DE LOS DESEOS",
-        "description": "Su presencia en nuestra boda es el mejor regalo que podemos recibir. Si desean tener un detalle con nosotros, un aporte en efectivo será muy apreciado.",
+        "description": "Celebrar este día con ustedes es el regalo más valioso para nosotros. Como ya hemos formado nuestro hogar, si desean tener un detalle con nosotros, un aporte económico nos ayudará a seguir construyendo esta nueva etapa juntos.\nPodrán hacerlo mediante una transferencia bancaria o depositando su sobre en el buzón de los deseos que estará disponible durante la recepción.",
         "icon": "gift"
       },
       "bankAccounts": [
@@ -114,43 +114,38 @@
           "accountType": "Cuenta de Ahorro",
           "accountNumber": "4404152723"
         }
-      ],
-      "envelopeWishes": {
-        "title": "BUZÓN DE LOS DESEOS",
-        "description": "Habrá un sobre en la recepción para sus bendiciones y deseos.",
-        "icon": "envelope"
-      }
+      ]
     },
     "gallery": [
       {
         "url": "assets/images/1.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
+        "alt": "",
+        "caption": ""
       },
       {
         "url": "assets/images/2.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
+        "alt": "",
+        "caption": ""
       },
       {
         "url": "assets/images/4.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
+        "alt": "",
+        "caption": ""
       },
       {
         "url": "assets/images/5.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
+        "alt": "",
+        "caption": ""
       },
       {
         "url": "assets/images/6.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
+        "alt": "",
+        "caption": ""
       },
       {
         "url": "assets/images/7.jpg",
-        "alt": "Foto Boda",
-        "caption": "Nuevo momento inolvidable"
+        "alt": "",
+        "caption": ""
       }
     ],
     "music": {

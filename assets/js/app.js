@@ -175,14 +175,8 @@ const DEFAULT_WEDDING_DATA = {
       icon: "gift"
     },
     bankAccounts: [
-      { bank: "Banrural", accountHolder: "Sandy Peláez", accountType: "Cuenta de Ahorro", accountNumber: "4404152723" },
-      { bank: "Banco Industrial", accountHolder: "José Alberto Herrera", accountType: "Cuenta Monetaria", accountNumber: "123-456789-0" }
-    ],
-    envelopeWishes: {
-      title: "SOBRE DE DESEOS",
-      description: "Habrá un sobre en recepción para sus bendiciones y deseos.",
-      icon: "envelope"
-    }
+      { bank: "Banrural", accountHolder: "Sandy Peláez", accountType: "Cuenta de Ahorro", accountNumber: "4404152723" }
+    ]
   },
     photos: {
       hero: "assets/images/couple-hero.jpg",
@@ -351,13 +345,8 @@ class WeddingApp {
       }
 
       if (d.details.gifts) {
-        this.setText('giftsTitleDisplay', d.details.gifts.title || 'MESA DE REGALOS');
-        this.setText('giftsDescDisplay', d.details.gifts.description || '');
-      }
-
-      if (d.details.envelopeWishes) {
-        this.setText('wishesTitleDisplay', d.details.envelopeWishes.title || 'SOBRE DE DESEOS');
-        this.setText('wishesDescDisplay', d.details.envelopeWishes.description || '');
+        this.setText('giftsTitleDisplay', d.details.gifts.title || 'BUZÓN DE LOS DESEOS');
+        this.setText('giftsDescDisplay', (d.details.gifts.description || '').replace(/\n/g, '<br><br>'), true);
       }
 
       // Bank Accounts Render
@@ -463,7 +452,7 @@ class WeddingApp {
     gallery.forEach(item => {
       galleryHtml += `
         <div class="gallery-item">
-          <img src="${this.escapeHtml(item.url)}" alt="${this.escapeHtml(item.alt || 'Momento')}" data-caption="${this.escapeHtml(item.caption || '')}">
+          <img src="${this.escapeHtml(item.url)}" alt="${this.escapeHtml(item.alt || '')}" data-caption="${this.escapeHtml(item.caption || '')}">
         </div>
       `;
     });

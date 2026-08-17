@@ -269,8 +269,8 @@ class WeddingAdminManager {
     this.setVal('giftsTitle', w.details.gifts.title);
     this.setVal('giftsDesc', w.details.gifts.description);
 
-    this.setVal('wishesTitle', w.details.envelopeWishes.title);
-    this.setVal('wishesDesc', w.details.envelopeWishes.description);
+    this.setVal('wishesTitle', w.details.envelopeWishes?.title || '');
+    this.setVal('wishesDesc', w.details.envelopeWishes?.description || '');
 
     // Fotos principales
     const heroImgUrl = w.photos?.hero || w.heroPhoto || (w.gallery && w.gallery[0]?.url && w.gallery[0].url.includes('couple-hero') ? w.gallery[0].url : 'assets/images/couple-hero.jpg');
@@ -347,8 +347,13 @@ class WeddingAdminManager {
     w.details.gifts.title = this.getVal('giftsTitle');
     w.details.gifts.description = this.getVal('giftsDesc');
 
-    w.details.envelopeWishes.title = this.getVal('wishesTitle');
-    w.details.envelopeWishes.description = this.getVal('wishesDesc');
+    if (this.getVal('wishesTitle') || this.getVal('wishesDesc')) {
+      w.details.envelopeWishes = w.details.envelopeWishes || {};
+      w.details.envelopeWishes.title = this.getVal('wishesTitle');
+      w.details.envelopeWishes.description = this.getVal('wishesDesc');
+    } else {
+      delete w.details.envelopeWishes;
+    }
 
     // Guardar fotos principales
     w.photos = w.photos || {};
@@ -371,7 +376,7 @@ class WeddingAdminManager {
       card.className = 'dynamic-item-card';
       card.innerHTML = `
         <div class="dynamic-item-header">
-          <span class="dynamic-item-title">#${index + 1} — ${this.escapeHtml(item.title || 'Momento')}</span>
+          <span class="dynamic-item-title">#${index + 1} — ${this.escapeHtml(item.title || '')}</span>
           <button type="button" class="btn-remove-item" data-index="${index}">🗑️ Eliminar</button>
         </div>
         <div class="form-grid-3">
@@ -541,7 +546,7 @@ class WeddingAdminManager {
           reader.onload = (event) => {
             const base64Url = event.target.result;
             item.url = base64Url;
-            if (!item.caption || item.caption === '' || item.caption === 'Foto Boda') {
+            if (!item.caption || item.caption === '' || item.caption === '') {
               item.caption = file.name.replace(/\.[^/.]+$/, "");
               card.querySelector('.gal-caption').value = item.caption;
             }
@@ -774,7 +779,7 @@ class WeddingAdminManager {
 
   escapeHtml(str) {
     if (!str) return '';
-    return String(str).replace(/[&<>"']/g, function(m) {
+    return String(str).replace(/[&<>"']/g, function (m) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
     });
   }
